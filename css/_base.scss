@@ -1,9 +1,13 @@
-// import Compass
+// compass, variables & mixins base file
+// http://compass-style.org/help/tutorials/best_practices/
 
+
+// import compass
+// http://compass-style.org/reference/compass/
 @import "compass";
 
-// base colors and styles
 
+// base colors and style variables
 $body-color: #606475;
 $body-font-defaults: 1em/1.625 Georgia, Times, "Times New Roman", serif;
 $text-color: #f1f1f1;
@@ -27,14 +31,4 @@ $transparency-hover: rgba(#202021, 0.2);
 $box-transparency: rgba(#202021, 0.2);
 
 
-// mixins
-// very depressing I don't have more, smart SASS/Compass people contribute on GitHub!
-
-@mixin pie-clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  @include has-layout;
-}
+// custom mixins
