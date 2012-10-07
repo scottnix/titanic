@@ -40,10 +40,14 @@ body {
 input,
 label,
 textarea {
-    padding: .2em .5em .4em;
+    padding: 0 .5em;
     font: $body-font-defaults;
+    line-height: 35px;
     color: $body-color;
 }
+input,
+label { height: 35px; }
+textarea { height: 200px; }
 h1,
 h2,
 h3,
@@ -324,24 +328,26 @@ blockquote {
 // ==========================================================================
 
 .entry-content {
-    img {
+    .wp-post-image {
         float: right;
-        height: auto;
-        max-width: 100%;
         margin: 0 0 20px 1.625em;
         border: 5px solid $box-transparency;
-        vertical-align: middle;
+    }
+    img {
+        height: auto;
+        max-width: 100%;
+        margin: 0 0 1.625em;
     }
 }
 .alignleft,
 img.alignleft {
     float: left;
-    margin-right: 20px;
+    margin-right: 1.625em;
 }
 .alignright,
 img.alignright {
     float: right;
-    margin-left: 20px;
+    margin-left: 1.625em;
 }
 .aligncenter,
 img.aligncenter {
@@ -518,6 +524,11 @@ img.aligncenter {
 .comment-subscription-form { margin: 0; }
 #subscribe-blog-label,
 #subscribe-label {
+    color: $text-color;
+}
+// password protcted posts
+.post-password-required label {
+    padding-left: 0;
     color: $text-color;
 }
 
