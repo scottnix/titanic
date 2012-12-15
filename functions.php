@@ -86,12 +86,18 @@ function childtheme_override_head_scripts() {
 
 // script manager template for registering and enqueuing files
 function childtheme_script_manager() {
+    // register google font css styles which are to be queued in the theme
+    wp_register_style('google-fonts', 'http://fonts.googleapis.com/css?family=PT+Sans:700');
+
     // registers modernizr script, stylesheet local path, no dependency, no version, loads in header
     wp_register_script('modernizr-js', get_stylesheet_directory_uri() . '/js/modernizr.js', false, false, false);
     // registers fitvids script, local stylesheet path, yes dependency is jquery, no version, loads in footer
     wp_register_script('fitvids-js', get_stylesheet_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), false, true);
     // registers misc custom script, local stylesheet path, yes dependency is jquery, no version, loads in footer
     wp_register_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', array('jquery'), false, true);
+
+    // enqueue the styles for use in theme
+    wp_enqueue_style ('google-fonts');
 
     // enqueue the scripts for use in theme
     wp_enqueue_script ('modernizr-js');
@@ -102,9 +108,8 @@ function childtheme_script_manager() {
 
         }
 
-    //always enqueue this last, helps with conflicts
+    //always enqueue custom js last, helps with conflicts
     wp_enqueue_script ('custom-js');
-
 }
 add_action('wp_enqueue_scripts', 'childtheme_script_manager');
 
@@ -182,19 +187,13 @@ add_filter('thematic_widgetized_areas', 'childtheme_hide_widgetized_areas');
 
 
 
-// overriwde branding to add clearfix class, faster to do it this way than through jQuery
-function childtheme_override_brandingopen() {
-        echo "\t<div id=\"branding\" class=\"cf\">\n";
-}
-
-
-
 // removes the H1 on main page which is duplicated when a page is used as a front page
 // also adds the content into a more semantic paragraph tag, where before it was just a div
 function childtheme_override_blogdescription() {
     $blogdesc = '"blog-description">' . get_bloginfo('description', 'display');
     echo "\t<p id=$blogdesc</p>\n\n";
 }
+
 
 
 // move the access inside the branding
@@ -289,21 +288,21 @@ add_filter('thematic_post_thumb_size', 'childtheme_post_thumb_size');
 
 
 // show excerpt on home page (blog) and front page (static home page)
-function snix_thematic_content($content) {
+function childtheme_thematic_content($content) {
     if ( is_home() || is_front_page() ) {
         $content= 'excerpt';
     }
     return $content;
 }
-add_filter('thematic_content', 'snix_thematic_content');
+add_filter('thematic_content', 'childtheme_thematic_content');
 
 
 
 // modify excerpt [...] to add a read more link instead
-function snix_modify_excerpt($text) {
+function childtheme_modify_excerpt($text) {
    return str_replace('[...]', '.... <a href="'.get_permalink().'" class="more-link">Read More &raquo;</a>', $text);
 }
-add_filter('get_the_excerpt', 'snix_modify_excerpt');
+add_filter('get_the_excerpt', 'childtheme_modify_excerpt');
 
 
 
