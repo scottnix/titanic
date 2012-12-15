@@ -1,0 +1,113 @@
+#comments {
+    clear:both;
+    ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+#comments-list {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            margin: 0 0 $spacing;
+            border: none;
+            background: rgba(0,0,0,.05);
+        }
+    }
+    ol {
+        margin: 0 0 $spacing;
+        border: 1px solid $accents-color;
+        border-bottom: none;
+
+    }
+    li {
+        position: relative;
+        border-bottom: 1px solid $accents-color;
+        .avatar {
+            position:absolute;
+            top: 1em;
+            left: 0;
+            border: 5px solid $box-transparency;
+        }
+            .comment-author {
+                font-weight: bold;
+                padding: 1em 0 0 100px;
+            }
+            .comment-meta { padding:0 0 50px 100px; }
+        li {
+            padding: 0 1em .25em;
+            .avatar {
+                position:absolute;
+                top: 1em;
+                left: 1em;
+            }
+
+        }
+    }
+    .edit-link { display: inline; }
+    .bypostauthor {  }
+    .thread-odd {  }
+    .comment-content { }
+    #respond {
+        margin: 0 0 $spacing;
+        padding: $spacing 1.5em;
+        border-bottom: 1px solid $accents-color;
+        form { margin: 0; }
+    }
+    ul #respond {
+        margin: 0;
+        border: 1px solid $accents-color;
+    }
+}
+.comment-reply-link {
+    padding: 1em 0;
+    text-align: right;
+}
+#trackbacks-list .comment-content {
+    position: absolute;
+    left: -9999px;
+}
+#respond {
+    @include pie-clearfix;
+    position: relative;
+    margin-bottom: $spacing;
+}
+#cancel-comment-reply-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.form-section {
+    margin-bottom: $spacing;
+    input[type="text"],
+    textarea {
+        width: 100%;
+        opacity: 0.7;
+        &:focus {
+            z-index: 1;
+            opacity: 1;
+        }
+    }
+}
+.comment-notes { display: none; }
+#form-allowed-tags {
+    color: $helper-text;
+    span { display: block; }
+}
+#trackbacks-list {
+    padding: 0;
+    li { list-style: none; }
+}
+.comment-subscription-form { margin: 0; }
+#subscribe-blog-label,
+#subscribe-label {
+    color: $text-color;
+}
+// password protcted posts
+.post-password-required label {
+    padding-left: 0;
+    color: $text-color;
+}

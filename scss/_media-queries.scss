@@ -1,0 +1,113 @@
+@media only screen and (max-width: 500px) {
+    .entry-content img {
+        width: 100%;
+        margin: 0 0 $spacing 0;
+    }
+}
+
+@media only screen and (min-width: 45em) {
+    #wrapper {
+        margin: $spacing auto;
+        box-shadow: 0 0 40px #333;
+    }
+    #wrapper,
+    #header,
+    #main,
+    #siteinfo,
+    .sub-wrapper {
+        max-width: 1140px;
+    }
+
+    #header { padding: 1em 2em; }
+    .menu-skip { display: none; }
+    .access, .sf-menu { display: block; }
+    #branding nav {
+        float: right;
+        ul {
+            ul { display: none; }
+        }
+        li {
+            float: left;
+            a {
+                padding: 1em;
+                color: $menu-link-color;
+                text-transform: lowercase;
+                &:hover {
+                    color: $menu-link-hover;
+                }
+            }
+        }
+        .current-menu-item a { color: $menu-link-hover; }
+    }
+    #main { padding: 0 2em; }
+    #container {
+        float: left;
+        width: 65.4%;
+        padding-right: 3.8%;
+    }
+    .main-aside {
+        float: right;
+        width: 30.8%;
+        clear: right;
+    }
+    #primary,
+    #secondary {
+        section {
+            @include transition-duration(.3s);
+            @include transition-timing-function(ease-in-out);
+            opacity: 0.7;
+            &:hover {
+                opacity: 1.0;
+            }
+        }
+    }
+    #comments { font-size: 90%; }
+    #footer nav { display: none; }
+    #subsidiary {
+        width: auto;
+        padding: $spacing 2em 0;
+        .aside {
+            float: left;
+            width: 30.8%;
+            margin: 0 3.8% 0 0; }
+        #third { margin: 0; }
+    }
+    blockquote {
+        &.left {
+            width: 33%;
+            float: left;
+            margin-left: 0;
+            margin-right: 1em;
+        }
+        &.right {
+            width: 33%;
+            float: right;
+            margin-left: 1em;
+            margin-right: 0;
+        }
+    }
+    .navigation {
+        margin: 0 0 $spacing;
+        overflow: hidden;
+        .meta-nav { font-style: normal; }
+    }
+    .nav-previous { float: left; }
+    .nav-next {
+        float: right;
+        text-align: right;
+    }
+    .content-column {
+        width: 45%;
+        margin: 0 0 $spacing;
+    }
+    #siteinfo { padding: $spacing 2em; }
+    .page-template-template-page-fullwidth-php #comments,
+    .attachment-jpeg #comments,
+    .attachment-png #comments {
+        width: 65.4%;
+    }
+}
+
+@media only screen and (max-width: 1170px) {
+    #wrapper { margin: 0 auto; }
+}

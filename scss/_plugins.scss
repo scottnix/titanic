@@ -1,0 +1,16 @@
+// wp stats smiley
+img#wpstats {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+// jetpack twitter widget
+.tweets {
+    font-size: 90%;
+    li {
+        padding: .5em 0 ;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+        &:last-child { border-bottom: none; }
+    }
+}

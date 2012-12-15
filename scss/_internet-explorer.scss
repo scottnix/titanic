@@ -1,0 +1,27 @@
+// less than IE 9 (so IE 8 and below)
+.lt-ie9 {
+    #branding,
+    #main,
+    #subsidiary {
+        width: 640px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #siteinfo { padding: $spacing 0; }
+}
+
+// less than IE 8 (so IE 7 and below)
+.lt-ie8 {
+    .menu-title { float: left; }
+    .menu-button { padding-bottom: 1em; }
+    // no box-model fix, so 100% + padding is more than 100%
+    input[type="text"],
+    textarea {
+        width: 97%;
+    }
+}
+
+// less than IE 7 (so IE 6)
+.lt-ie7 {
+
+}

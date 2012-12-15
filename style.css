@@ -5,10 +5,9 @@ Description: A child theme based on the Responsive Base child theme for the Them
 Author: Scott Nix
 Author URI: http://scottnix.com/
 Template: thematic
-Version: 0.1.0
+Version: 0.2.0
 Tags: thematic, child-theme, responsive, mobile-first, SASS
 */
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:700);
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
 }
@@ -219,6 +218,7 @@ table {
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -230,21 +230,10 @@ body {
 }
 
 input,
-label,
 textarea {
-  padding: 0 .5em;
+  padding: .5em;
   font: 1em/1.625 Georgia, Times, "Times New Roman", serif;
-  line-height: 35px;
   color: #606475;
-}
-
-input,
-label {
-  height: 35px;
-}
-
-textarea {
-  height: 200px;
 }
 
 h1,
@@ -454,8 +443,14 @@ blockquote cite {
 }
 
 #branding {
+  *zoom: 1;
   position: relative;
   margin: 0 auto;
+}
+#branding:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 #blog-title {
@@ -669,13 +664,14 @@ img.aligncenter {
   clear: both;
   overflow: hidden;
 }
-.gallery .gallery-item {
+
+.gallery-item {
   margin: 0;
   padding: 0;
   list-style: none;
   overflow: hidden;
 }
-.gallery .gallery-item img {
+.gallery-item img {
   float: none;
   height: auto;
   max-width: 90%;
@@ -784,37 +780,27 @@ img.aligncenter {
   clear: both;
 }
 
-#cancel-comment-reply {
+#cancel-comment-reply-link {
   position: absolute;
-  top: 1.625em;
-  right: 1.5em;
+  top: 0;
+  right: 0;
 }
 
 .form-section {
-  position: relative;
   margin-bottom: 1.625em;
-}
-.form-section label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  text-shadow: none;
 }
 .form-section input[type="text"],
 .form-section textarea {
-  position: relative;
   width: 100%;
-  text-indent: 90px;
   opacity: 0.7;
 }
 .form-section input[type="text"]:focus,
 .form-section textarea:focus {
   z-index: 1;
-  text-indent: 0;
   opacity: 1;
 }
-.form-section span {
+
+.comment-notes {
   display: none;
 }
 
@@ -1033,11 +1019,13 @@ input[type="submit"]:hover {
 
 .lt-ie9 #branding,
 .lt-ie9 #main,
-.lt-ie9 #subsidiary,
-.lt-ie9 #siteinfo {
+.lt-ie9 #subsidiary {
   width: 640px;
   padding-left: 20px;
   padding-right: 20px;
+}
+.lt-ie9 #siteinfo {
+  padding: 1.625em 0;
 }
 
 .lt-ie8 .menu-title {
@@ -1046,15 +1034,9 @@ input[type="submit"]:hover {
 .lt-ie8 .menu-button {
   padding-bottom: 1em;
 }
-
-.lt-ie8 .form-section label {
-  color: #606475;
-}
-.lt-ie8 .form-section input[type="text"],
-.lt-ie8 .form-section textarea {
-  width: 540px;
-  text-indent: 0;
-  padding-left: 90px;
+.lt-ie8 input[type="text"],
+.lt-ie8 textarea {
+  width: 97%;
 }
 
 img#wpstats {
@@ -1136,7 +1118,7 @@ img#wpstats {
     margin: 0 0 1.625em 0;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 45em) {
   #wrapper {
     margin: 1.625em auto;
     box-shadow: 0 0 40px #333;
@@ -1191,7 +1173,6 @@ img#wpstats {
     float: left;
     width: 65.4%;
     padding-right: 3.8%;
-    border-right: 1px solid #afb1b9;
   }
 
   .main-aside {
@@ -1271,6 +1252,10 @@ img#wpstats {
   .content-column {
     width: 45%;
     margin: 0 0 1.625em;
+  }
+
+  #siteinfo {
+    padding: 1.625em 2em;
   }
 
   .page-template-template-page-fullwidth-php #comments,
