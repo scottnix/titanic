@@ -26,7 +26,7 @@ Tags: thematic, child-theme, responsive, mobile-first, SASS
 * { @include box-sizing(border-box); }
 
 // ==========================================================================
-// global styles
+// basic styles
 // ==========================================================================
 
 body {
@@ -41,46 +41,48 @@ textarea {
     font: $body-font-defaults;
     color: $body-color;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    @include text-shadow($shadow-1, $shadow-2, $shadow-3);
-    font-family: $header-font;
-    font-weight: 700;
-    color: $header-color;
-}
 h1 {
+    @include text-shadow($shadow-1, $shadow-2, $shadow-3);
     margin: 0 0 0.5417em;
+    font-family: $header-font;
     font-size: 3em;
     line-height: 1.0833em;
+    color: $header-color;
 }
 h2 {
+    @include text-shadow($shadow-1, $shadow-2, $shadow-3);
     margin: 0 0 0.7222em;
+    font-family: $header-font;
     font-size: 2.25em;
     line-height: 1.4444em;
+    color: $header-color;
 }
 h3 {
+    @include text-shadow($shadow-1, $shadow-2, $shadow-3);
     margin: 0 0 0.8667em;
+    font-family: $header-font;
     font-size: 1.875em;
     line-height: 1.7333em;
+    color: $header-color;
 }
 h4 {
     margin: 0 0 1.0833em;
+    font-family: $header-font;
     font-size: 1.5em;
     line-height: 1.0833em;
+    color: $header-color;
 }
 h5 {
     margin: 0 0 1.1818em;
     font-size: 1.375em;
     line-height: 1.1818em;
+    color: $header-color;
 }
 h6 {
     margin: 0 0 1.4444em;
     font-size: 1.125em;
     line-height: 1.4444em;
+    color: $header-color;
 }
 a {
     @include transition-duration(.3s);
@@ -100,34 +102,35 @@ a {
     }
 }
 p,
-ul,
-ol,
-dd,
 pre,
-hr,
-table,
 form,
 select,
 address,
 embed {
     margin: 0 0 $spacing;
 }
-ul { list-style: disc; }
-ul ul,
-ul ol,
-ol ul,
-ol ol {
-    margin-bottom: 0;
+ul {
+    margin: 0 0 $spacing;
+    list-style: disc;
 }
-ol { list-style-type: decimal;
+ol {
+    margin: 0 0 $spacing;
+    list-style-type: decimal;
     ol { list-style: upper-alpha;
         ol { list-style: lower-roman;
             ol { list-style: lower-alpha; }
         }
     }
 }
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+    margin-bottom: 0;
+}
 dl { margin: 0 1em; }
 dt { font-weight: bold; }
+dd { margin: 0 0 $spacing; }
 abbr, acronym { cursor: help; }
 ins {
     display: block;
@@ -137,10 +140,18 @@ ins {
     box-shadow: $shadow-3;
 }
 textarea { resize: vertical; }
-code { padding: 0 .3em; font-size: 95%; background: $box-transparency; }
-pre code { background: none; padding: 0; }
+code {
+    padding: 0 .3em;
+    font-size: 95%;
+    background: $box-transparency;
+}
+pre code {
+    background: none;
+    padding: 0;
+}
 caption { text-align: center; }
 table {
+    margin: 0 0 $spacing;
     border: 1px solid $accents-color;
     border-width: 1px 1px 0;
     text-align: left;
@@ -153,6 +164,7 @@ td {
 }
 hr {
     display: block;
+    margin: 0 0 $spacing;
     height: 1px;
     border: 0;
     border-top: 1px solid $accents-color;
@@ -445,6 +457,9 @@ input[type="submit"]:hover {
 }
 .footer-aside { margin: 1em; }
 
+// overriding css above - specific pages, templates
+// ==========================================================================
+
 // page templates
 .page-template-template-page-fullwidth-php {
     #container {
@@ -474,26 +489,26 @@ input[type="submit"]:hover {
 
 @import 'scss/internet-explorer';
 
-// plugin specific
+// plugins
 // ==========================================================================
 
 @import 'scss/plugins';
 
-// html5boilerplate helper classes
+// helper classes - html5boilerplate.com
 // ==========================================================================
 
-@import 'scss/html5boilerplate-helper-classes';
+@import 'scss/helper-classes';
 
 // media queries
 // ==========================================================================
 
 @import 'scss/media-queries';
 
-// html5boilerplate print styles
+// print styles - html5boilerplate.com
 // ==========================================================================
 
 @media print {
-    @import 'scss/html5boilerplate-print-styles';
+    @import 'scss/print-styles';
     // custom additions to default boilerplate print styles
     .aside,
     .menu,

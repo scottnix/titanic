@@ -236,54 +236,53 @@ textarea {
   color: #606475;
 }
 
-h1,
-h2,
-h3,
-.widgettitle,
-h4,
-h5,
-h6,
-.page-title {
+h1 {
   text-shadow: 1px 1px 0 black, 2px 2px 0 rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.2);
+  margin: 0 0 0.5417em;
   font-family: "PT Sans", sans-serif;
-  font-weight: 700;
+  font-size: 3em;
+  line-height: 1.0833em;
   color: #d7d8dc;
 }
 
-h1 {
-  margin: 0 0 0.5417em;
-  font-size: 3em;
-  line-height: 1.0833em;
-}
-
 h2 {
+  text-shadow: 1px 1px 0 black, 2px 2px 0 rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.2);
   margin: 0 0 0.7222em;
+  font-family: "PT Sans", sans-serif;
   font-size: 2.25em;
   line-height: 1.4444em;
+  color: #d7d8dc;
 }
 
 h3, .widgettitle {
+  text-shadow: 1px 1px 0 black, 2px 2px 0 rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.2);
   margin: 0 0 0.8667em;
+  font-family: "PT Sans", sans-serif;
   font-size: 1.875em;
   line-height: 1.7333em;
+  color: #d7d8dc;
 }
 
 h4 {
   margin: 0 0 1.0833em;
+  font-family: "PT Sans", sans-serif;
   font-size: 1.5em;
   line-height: 1.0833em;
+  color: #d7d8dc;
 }
 
 h5 {
   margin: 0 0 1.1818em;
   font-size: 1.375em;
   line-height: 1.1818em;
+  color: #d7d8dc;
 }
 
 h6, .page-title {
   margin: 0 0 1.4444em;
   font-size: 1.125em;
   line-height: 1.4444em;
+  color: #d7d8dc;
 }
 
 a {
@@ -311,12 +310,7 @@ a:focus, a:active {
 }
 
 p,
-ul,
-ol,
-dd,
 pre,
-hr,
-table,
 form,
 select,
 address,
@@ -325,17 +319,12 @@ embed {
 }
 
 ul {
+  margin: 0 0 1.625em;
   list-style: disc;
 }
 
-ul ul,
-ul ol,
-ol ul,
-ol ol {
-  margin-bottom: 0;
-}
-
 ol {
+  margin: 0 0 1.625em;
   list-style-type: decimal;
 }
 ol ol {
@@ -348,12 +337,23 @@ ol ol ol ol {
   list-style: lower-alpha;
 }
 
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: 0;
+}
+
 dl {
   margin: 0 1em;
 }
 
 dt {
   font-weight: bold;
+}
+
+dd {
+  margin: 0 0 1.625em;
 }
 
 abbr, acronym {
@@ -388,6 +388,7 @@ caption {
 }
 
 table {
+  margin: 0 0 1.625em;
   border: 1px solid #afb1b9;
   border-width: 1px 1px 0;
   text-align: left;
@@ -405,6 +406,7 @@ td {
 
 hr {
   display: block;
+  margin: 0 0 1.625em;
   height: 1px;
   border: 0;
   border-top: 1px solid #afb1b9;
