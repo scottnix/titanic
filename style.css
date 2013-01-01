@@ -236,31 +236,35 @@ textarea {
   color: #606475;
 }
 
+textarea {
+  resize: vertical;
+}
+
 h1 {
-  text-shadow: 1px 1px 0 black, 2px 2px 0 rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.2);
   margin: 0 0 0.5417em;
   font-family: "PT Sans", sans-serif;
   font-size: 3em;
   line-height: 1.0833em;
   color: #d7d8dc;
+  text-shadow: 1px 1px 0 black, 2px 2px 0 rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
-  text-shadow: 1px 1px 0 black, 2px 2px 0 rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.2);
   margin: 0 0 0.7222em;
   font-family: "PT Sans", sans-serif;
   font-size: 2.25em;
   line-height: 1.4444em;
   color: #d7d8dc;
+  text-shadow: 1px 1px 0 black, 2px 2px 0 rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 h3, .widgettitle {
-  text-shadow: 1px 1px 0 black, 2px 2px 0 rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.2);
   margin: 0 0 0.8667em;
   font-family: "PT Sans", sans-serif;
   font-size: 1.875em;
   line-height: 1.7333em;
   color: #d7d8dc;
+  text-shadow: 1px 1px 0 black, 2px 2px 0 rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 h4 {
@@ -269,20 +273,25 @@ h4 {
   font-size: 1.5em;
   line-height: 1.0833em;
   color: #d7d8dc;
+  text-shadow: 1px 1px 0 black, 2px 2px 0 rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 h5 {
   margin: 0 0 1.1818em;
+  font-family: "PT Sans", sans-serif;
   font-size: 1.375em;
   line-height: 1.1818em;
   color: #d7d8dc;
+  text-shadow: 1px 1px 0 black, 2px 2px 0 rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 h6, .page-title {
   margin: 0 0 1.4444em;
+  font-family: "PT Sans", sans-serif;
   font-size: 1.125em;
   line-height: 1.4444em;
   color: #d7d8dc;
+  text-shadow: 1px 1px 0 black, 2px 2px 0 rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 a {
@@ -356,7 +365,8 @@ dd {
   margin: 0 0 1.625em;
 }
 
-abbr, acronym {
+abbr,
+acronym {
   cursor: help;
 }
 
@@ -365,11 +375,6 @@ ins {
   padding: .5em;
   text-decoration: none;
   background: #202021;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-}
-
-textarea {
-  resize: vertical;
 }
 
 code {
@@ -505,7 +510,7 @@ blockquote cite {
   font-size: 110%;
   font-weight: 400;
   text-transform: lowercase;
-  color: #fefefe;
+  color: #f1f1f1;
 }
 #footer nav ul li a:hover {
   color: #afb1b9;
@@ -525,12 +530,7 @@ blockquote cite {
 }
 
 #container {
-  width: 100%;
   margin: 0 0 1.625em;
-}
-
-#content {
-  width: 100%;
 }
 
 .page-title .meta-nav {
@@ -587,11 +587,6 @@ blockquote cite {
   clear: both;
 }
 
-.content-column {
-  width: 100%;
-  float: left;
-}
-
 #links-page,
 #archives-page {
   list-style: none;
@@ -609,7 +604,7 @@ blockquote cite {
 
 .entry-content .wp-post-image {
   float: right;
-  margin: 0 0 20px 1.625em;
+  margin: 0 0 1em 1.625em;
   border: 5px solid rgba(32, 32, 33, 0.2);
 }
 .entry-content img {
@@ -621,13 +616,13 @@ blockquote cite {
 .alignleft,
 img.alignleft {
   float: left;
-  margin-right: 1.625em;
+  margin-right: 1em;
 }
 
 .alignright,
 img.alignright {
   float: right;
-  margin-left: 1.625em;
+  margin-left: 1em;
 }
 
 .aligncenter,
@@ -639,18 +634,18 @@ img.aligncenter {
 }
 
 .wp-caption {
-  max-width: 96%;
+  max-width: 100%;
   margin-bottom: 1.625em;
-  padding: 9px 0 0;
   text-align: center;
 }
 .wp-caption img {
   margin: 0;
   padding: 0;
 }
-.wp-caption p.wp-caption-text {
+
+.wp-caption-text {
   margin: 0;
-  padding: 1.625em 5px;
+  padding: 1.625em 0;
 }
 
 .gallery {
@@ -660,7 +655,8 @@ img.aligncenter {
   clear: both;
   overflow: hidden;
 }
-.gallery .gallery-row {
+
+.gallery-row {
   display: block;
   margin: 0;
   clear: both;
@@ -674,21 +670,17 @@ img.aligncenter {
   overflow: hidden;
 }
 .gallery-item img {
-  float: none;
   height: auto;
-  max-width: 90%;
   margin: 0 auto;
-  padding: 1%;
   border: none !important;
 }
 
 .gallery-icon {
-  margin: 0 5px;
-  padding-top: 6px;
+  margin: 0 .25em;
 }
 
 .gallery-caption {
-  padding: 6px 6px 0;
+  padding: .25em .25em 0;
 }
 
 .wp-smiley {
@@ -882,7 +874,7 @@ input[type="submit"] {
   background-image: linear-gradient(#333333, #222222);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 2px 2px 3px rgba(0, 0, 0, 0.3);
   line-height: 18px;
-  color: #fefefe;
+  color: #f1f1f1;
   text-align: center;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
 }
@@ -1114,7 +1106,7 @@ img#wpstats {
   *zoom: 1;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 30em) {
   .entry-content img {
     width: 100%;
     margin: 0 0 1.625em 0;
@@ -1157,7 +1149,7 @@ img#wpstats {
   }
   #branding nav li a {
     padding: 1em;
-    color: #fefefe;
+    color: #f1f1f1;
     text-transform: lowercase;
   }
   #branding nav li a:hover {
@@ -1248,6 +1240,7 @@ img#wpstats {
   }
 
   .content-column {
+    float: left;
     width: 45%;
     margin: 0 0 1.625em;
   }
@@ -1262,7 +1255,7 @@ img#wpstats {
     width: 65.4%;
   }
 }
-@media only screen and (max-width: 1170px) {
+@media only screen and (max-width: 73em) {
   #wrapper {
     margin: 0 auto;
   }

@@ -1,4 +1,4 @@
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 30em) {
     .entry-content img {
         width: 100%;
         margin: 0 0 $spacing 0;
@@ -95,6 +95,7 @@
         text-align: right;
     }
     .content-column {
+        float: left;
         width: 45%;
         margin: 0 0 $spacing;
     }
@@ -106,6 +107,6 @@
     }
 }
 
-@media only screen and (max-width: 1170px) {
+@media only screen and (max-width: 73em) {
     #wrapper { margin: 0 auto; }
 }
