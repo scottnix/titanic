@@ -115,9 +115,9 @@ add_action('wp_enqueue_scripts', 'childtheme_script_manager');
 
 
 
-// add favicon to site, add 16x16 or 32x32 "favicon.ico" image to child themes main folder
+// add favicon to site, add 16x16 or 32x32 "favicon.ico" or .png image to child themes main folder
 function childtheme_add_favicon() { ?>
-<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.png" />
+<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 <?php }
 add_action('wp_head', 'childtheme_add_favicon');
 
@@ -130,7 +130,7 @@ function childtheme_register_menus() {
         register_nav_menu('tertiary-menu', 'Tertiary Menu');
     }
 }
-add_action('init', 'childtheme_register_menus');
+add_action('thematic_child_init', 'childtheme_register_menus');
 
 
 
@@ -200,7 +200,7 @@ function childtheme_override_blogdescription() {
 function childtheme_move_access() {
     remove_action('thematic_header', 'thematic_access', 9);
 }
-add_action('init', 'childtheme_move_access');
+add_action('thematic_child_init', 'childtheme_move_access');
 add_action('thematic_header', 'thematic_access', 6);
 
 
