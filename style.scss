@@ -151,8 +151,8 @@ code {
     background: $box-transparency;
 }
 pre code {
-    background: none;
     padding: 0;
+    background: none;
 }
 caption { text-align: center; }
 table {
@@ -283,7 +283,8 @@ blockquote {
     background: $transparency;
 }
 .entry-title {
-    a { color: $header-color;
+    a {
+        color: $header-color;
         &:hover { color: $link-hover; }
     }
 }
@@ -399,7 +400,8 @@ input[type="submit"]:hover {
         list-style: none;
         margin-left: 0;
         padding: 0;
-        ul { margin: 0 0 0 20px;
+        ul {
+            margin: 0 0 0 20px;
             li { padding: 1px 0; }
             ul { margin-bottom: 0; }
         }
@@ -429,7 +431,8 @@ input[type="submit"]:hover {
 .widgettitle {
     @extend h3;
     margin-bottom: 0;
-    a { color: $header-color;
+    a {
+        color: $header-color;
         &:hover { color: $link-hover; }
     }
 }
