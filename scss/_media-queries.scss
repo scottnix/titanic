@@ -17,13 +17,22 @@
     .sub-wrapper {
         max-width: 1140px;
     }
-    #header { padding: 1em 2em; }
-    .menu-skip { display: none; }
-    .access, .sf-menu { display: block; }
+    #header { 
+        padding: 1em 2em; 
+    }
+    .menu-skip { 
+        display: none; 
+    }
+    .access, 
+    .sf-menu { 
+        display: block; 
+    }
     #branding nav {
         float: right;
         ul {
-            ul { display: none; }
+            ul { 
+                display: none; 
+            }
         }
         li {
             float: left;
@@ -36,9 +45,13 @@
                 }
             }
         }
-        .current-menu-item a { color: $menu-link-hover; }
+        .current-menu-item a { 
+            color: $menu-link-hover; 
+        }
     }
-    #main { padding: 0 2em; }
+    #main { 
+        padding: 0 2em; 
+    }
     #container {
         float: left;
         width: 65.4%;
@@ -60,7 +73,9 @@
             }
         }
     }
-    #footer nav { display: none; }
+    #footer nav { 
+        display: none; 
+    }
     #subsidiary {
         width: auto;
         padding: $spacing 2em 0;
@@ -68,7 +83,9 @@
             float: left;
             width: 30.8%;
             margin: 0 3.8% 0 0; }
-        #third { margin: 0; }
+        #third { 
+            margin: 0; 
+        }
     }
     blockquote {
         &.left {
@@ -87,9 +104,13 @@
     .navigation {
         margin: 0 0 $spacing;
         overflow: hidden;
-        .meta-nav { font-style: normal; }
+        .meta-nav { 
+            font-style: normal; 
+        }
     }
-    .nav-previous { float: left; }
+    .nav-previous { 
+        float: left; 
+    }
     .nav-next {
         float: right;
         text-align: right;
@@ -99,7 +120,9 @@
         width: 45%;
         margin: 0 0 $spacing;
     }
-    #siteinfo { padding: $spacing 2em; }
+    #siteinfo { 
+        padding: $spacing 2em; 
+    }
     .page-template-template-page-fullwidth-php #comments,
     .attachment-jpeg #comments,
     .attachment-png #comments {
@@ -108,5 +131,7 @@
 }
 
 @media only screen and (max-width: 73em) {
-    #wrapper { margin: 0 auto; }
+    #wrapper { 
+        margin: 0 auto; 
+    }
 }

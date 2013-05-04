@@ -11,6 +11,8 @@ img#wpstats {
     li {
         padding: .5em 0 ;
         border-bottom: 1px solid rgba(0, 0, 0, 0.13);
-        &:last-child { border-bottom: none; }
+        &:last-child { 
+            border-bottom: none; 
+        }
     }
 }

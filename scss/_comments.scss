@@ -35,7 +35,9 @@
                 font-weight: bold;
                 padding: 1em 0 0 100px;
             }
-            .comment-meta { padding:0 0 50px 100px; }
+            .comment-meta { 
+                padding:0 0 50px 100px; 
+            }
         li {
             padding: 0 1em .25em;
             .avatar {
@@ -45,9 +47,11 @@
             }
         }
     }
-    .edit-link { display: inline; }
-    .bypostauthor {  }
-    .thread-odd {  }
+    .edit-link { 
+        display: inline; 
+    }
+    .bypostauthor { }
+    .thread-odd { }
     .comment-content { }
     #respond {
         margin: 0 0 $spacing;
@@ -90,16 +94,24 @@
         }
     }
 }
-.comment-notes { display: none; }
+.comment-notes { 
+    display: none; 
+}
 #form-allowed-tags {
     color: $helper-text;
-    span { display: block; }
+    span { 
+        display: block; 
+    }
 }
 #trackbacks-list {
     padding: 0;
-    li { list-style: none; }
+    li { 
+        list-style: none; 
+    }
 }
-.comment-subscription-form { margin: 0; }
+.comment-subscription-form { 
+    margin: 0; 
+}
 #subscribe-blog-label,
 #subscribe-label {
     color: $text-color;
