@@ -8,14 +8,25 @@ Template: thematic
 Version: 0.2.0
 Tags: thematic, child-theme, responsive, mobile-first, SASS
 */
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
   display: block;
 }
 
-audio, canvas, video {
+audio,
+canvas,
+video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
 }
 
 audio:not([controls]) {
@@ -28,13 +39,9 @@ audio:not([controls]) {
 }
 
 html {
-  font-size: 100%;
+  font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-}
-
-html, button, input, select, textarea {
-  font-family: sans-serif;
 }
 
 body {
@@ -45,7 +52,8 @@ a:focus {
   outline: thin dotted;
 }
 
-a:active, a:hover {
+a:active,
+a:hover {
   outline: 0;
 }
 
@@ -53,16 +61,19 @@ abbr[title] {
   border-bottom: 1px dotted;
 }
 
-b, strong {
+b,
+strong {
   font-weight: bold;
-}
-
-blockquote {
-  margin: 1em 40px;
 }
 
 dfn {
   font-style: italic;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
 }
 
 mark {
@@ -70,36 +81,28 @@ mark {
   color: #000;
 }
 
-p, pre {
-  margin: 1em 0;
-}
-
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-family: monospace,serif;
-  _font-family: 'courier new',monospace;
   font-size: 1em;
 }
 
 pre {
-  white-space: pre;
   white-space: pre-wrap;
-  word-wrap: break-word;
 }
 
 q {
-  quotes: none;
-}
-
-q:before, q:after {
-  content: '';
-  content: none;
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 small {
   font-size: 80%;
 }
 
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -114,26 +117,8 @@ sub {
   bottom: -0.25em;
 }
 
-dl, menu, ol, ul {
-  margin: 1em 0;
-}
-
-dd {
-  margin: 0 0 0 40px;
-}
-
-menu, ol, ul {
-  padding: 0 0 0 40px;
-}
-
-nav ul, nav ol {
-  list-style: none;
-  list-style-image: none;
-}
-
 img {
   border: 0;
-  -ms-interpolation-mode: bicubic;
 }
 
 svg:not(:root) {
@@ -141,10 +126,6 @@ svg:not(:root) {
 }
 
 figure {
-  margin: 0;
-}
-
-form {
   margin: 0;
 }
 
@@ -157,36 +138,44 @@ fieldset {
 legend {
   border: 0;
   padding: 0;
-  white-space: normal;
-  *margin-left: -7px;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
   font-size: 100%;
   margin: 0;
-  vertical-align: baseline;
-  *vertical-align: middle;
 }
 
-button, input {
+button,
+input {
   line-height: normal;
 }
 
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
-  *overflow: visible;
+button,
+select {
+  text-transform: none;
 }
 
-button[disabled], input[disabled] {
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
   cursor: default;
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
-  *height: 13px;
-  *width: 13px;
 }
 
 input[type="search"] {
@@ -196,11 +185,13 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -296,14 +287,10 @@ h6, .page-title {
 }
 
 a {
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-in-out;
-  -moz-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   color: #d7d8dc;
   text-decoration: none;
 }
@@ -491,7 +478,8 @@ blockquote cite {
   background: url(images/nav-jump-icon.png);
 }
 
-.access, .sf-menu {
+.access,
+.sf-menu {
   display: none;
 }
 
@@ -1061,11 +1049,11 @@ img#wpstats {
   content: "";
   display: block;
   width: 0;
-  height: 100%;
+  height: 150%;
 }
 
 .hidden {
-  display: none!important;
+  display: none !important;
   visibility: hidden;
 }
 
@@ -1080,7 +1068,8 @@ img#wpstats {
   width: 1px;
 }
 
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -1093,16 +1082,17 @@ img#wpstats {
   visibility: hidden;
 }
 
-.cf:before, .cf:after {
+.clearfix:before,
+.clearfix:after {
   content: " ";
   display: table;
 }
 
-.cf:after {
+.clearfix:after {
   clear: both;
 }
 
-.cf {
+.clearfix {
   *zoom: 1;
 }
 
@@ -1134,7 +1124,8 @@ img#wpstats {
     display: none;
   }
 
-  .access, .sf-menu {
+  .access,
+  .sf-menu {
     display: block;
   }
 
@@ -1262,13 +1253,14 @@ img#wpstats {
 }
 @media print {
   * {
-    background: transparent!important;
-    color: #000!important;
-    box-shadow: none!important;
-    text-shadow: none!important;
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
 
-  a, a:visited {
+  a,
+  a:visited {
     text-decoration: underline;
   }
 
@@ -1280,11 +1272,14 @@ img#wpstats {
     content: " (" attr(title) ")";
   }
 
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
     content: "";
   }
 
-  pre, blockquote {
+  pre,
+  blockquote {
     border: 1px solid #999999;
     page-break-inside: avoid;
   }
@@ -1293,24 +1288,30 @@ img#wpstats {
     display: table-header-group;
   }
 
-  tr, img {
+  tr,
+  img {
     page-break-inside: avoid;
   }
 
   img {
-    max-width: 100%!important;
+    max-width: 100% !important;
   }
 
   @page {
-    margin: .5cm;
+    margin: 0.5cm;
 }
 
-  p, h2, h3, .widgettitle {
+  p,
+  h2,
+  h3,
+  .widgettitle {
     orphans: 3;
     widows: 3;
   }
 
-  h2, h3, .widgettitle {
+  h2,
+  h3,
+  .widgettitle {
     page-break-after: avoid;
   }
 
