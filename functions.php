@@ -263,19 +263,16 @@ function childtheme_override_nav_above() {
 
 // remove single page nav below functionality
 function childtheme_override_nav_below() {
-    if (is_single()) {
-        //silence
+    if ( ! is_single() ) { ?>
+        <div id="nav-below" class="navigation"> <?php 
+            if ( function_exists( 'wp_pagenavi' ) ) {
+                wp_pagenavi();
+             } else { ?>  
+            <div class="nav-previous"><?php next_posts_link(sprintf('<span class="meta-nav">&laquo;</span> %s', __('Older posts', 'thematic') ) ) ?></div>
+            <div class="nav-next"><?php previous_posts_link(sprintf('%s <span class="meta-nav">&raquo;</span>',__( 'Newer posts', 'thematic') ) ) ?></div>
+            <?php } ?>
+        </div>  <?php
     }
-    else {  ?>
-    <div id="nav-below" class="navigation">
-    <?php if (function_exists('wp_pagenavi')) {
-            wp_pagenavi();
-    } else { ?>
-        <div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&laquo;</span> Older posts', 'thematic')) ?></div>
-        <div class="nav-next"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&raquo;</span>', 'thematic')) ?></div>
-    <?php } ?>
-    </div>
-<?php }
 }
 
 
