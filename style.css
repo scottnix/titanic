@@ -1132,6 +1132,9 @@ img#wpstats {
   #branding nav {
     float: right;
   }
+  #branding nav ul {
+    list-style: none;
+  }
   #branding nav ul ul {
     display: none;
   }
