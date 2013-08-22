@@ -189,6 +189,15 @@ add_filter('thematic_widgetized_areas', 'childtheme_hide_widgetized_areas');
 
 
 
+// remove user agent sniffing from thematic theme
+// this is what applies classes to the browser type and version body classes
+function childtheme_show_bc_browser() {
+    return FALSE;
+}
+add_filter('thematic_show_bc_browser', 'childtheme_show_bc_browser');
+
+
+
 // removes the H1 on main page which is duplicated when a page is used as a front page
 // also adds the content into a more semantic paragraph tag, where before it was just a div
 function childtheme_override_blogdescription() {
@@ -264,10 +273,10 @@ function childtheme_override_nav_above() {
 // remove single page nav below functionality
 function childtheme_override_nav_below() {
     if ( ! is_single() ) { ?>
-        <div id="nav-below" class="navigation"> <?php 
+        <div id="nav-below" class="navigation"> <?php
             if ( function_exists( 'wp_pagenavi' ) ) {
                 wp_pagenavi();
-             } else { ?>  
+             } else { ?>
             <div class="nav-previous"><?php next_posts_link(sprintf('<span class="meta-nav">&laquo;</span> %s', __('Older posts', 'thematic') ) ) ?></div>
             <div class="nav-next"><?php previous_posts_link(sprintf('%s <span class="meta-nav">&raquo;</span>',__( 'Newer posts', 'thematic') ) ) ?></div>
             <?php } ?>
